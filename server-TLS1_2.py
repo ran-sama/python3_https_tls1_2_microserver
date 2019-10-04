@@ -40,7 +40,7 @@ def main():
         SimpleHTTPRequestHandler.sys_version = "https://github.com/ran-sama"#display custom Python system version
         SimpleHTTPRequestHandler.server_version = "https://github.com/ran-sama"#display custom server software version
         my_server = ThreadedHTTPServer(('', 443), HSTSHandler)
-        my_server.socket = sslcontext.wrap_socket(my_server.socket, server_side=True)
+        my_server.socket = sslcontext.wrap_socket(my_server.socket, do_handshake_on_connect=False, server_side=True)
         print('Starting server, use <Ctrl-C> to stop')
         my_server.serve_forever()
 
