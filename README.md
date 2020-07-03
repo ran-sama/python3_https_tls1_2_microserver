@@ -109,10 +109,10 @@ Do notice a system reboot is forced at the end, if you don't want this you can j
 Please use a different day and time! I'm sure Let's entcrypt can handle the load to their servers, but randomize it a bit.
 
 Every 2nd odd month:
-https://crontab.guru/#0_4_2_*/2_*
+[https://crontab.guru/#0_4_2_*/2_*](https://crontab.guru/#0_4_2_*/2_*)
 
 Every 2nd even month:
-https://crontab.guru/#0_4_2_2-12/2_*
+[https://crontab.guru/#0_4_2_2-12/2_*](https://crontab.guru/#0_4_2_2-12/2_*)
 
 
 ## License
