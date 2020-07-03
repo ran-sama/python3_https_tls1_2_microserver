@@ -11,10 +11,10 @@ Threaded python3 HTTPS+TLS1.3 server w/ CryptCheck & SSL Labs 100% A+ rating.
 ![alt text](https://raw.githubusercontent.com/ran-sama/python3_https_tls1_2_microserver/master/images/cryptcheck.png)
 ![alt text](https://raw.githubusercontent.com/ran-sama/python3_https_tls1_2_microserver/master/images/observatory_rating_new.png)
 
-## Experimental TLS1.3 support after OpenSSL_1_1_1a update
+## TLS1.3 fully supported on OpenSSL 1.1.1a and higher
 ![alt text](https://raw.githubusercontent.com/ran-sama/python3_https_tls1_2_microserver/master/images/tls13_tls12_mixed_mode.png)
 
-To disable the single AES128 cipher please edit your OpenSSL config:
+(Optional step for extra security) To disable the single AES128 cipher please edit your OpenSSL config:
 ```
 sudo nano /etc/ssl/openssl.cnf
 ```
