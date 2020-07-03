@@ -101,5 +101,19 @@ If all is configured correctly, bringing up server.py with python3 will make it 
 
 * Your future tasks: Set up an own cronjob to run every 90 days for auto-renewal of your certificates!
 
+To help you with this I provide an example:
+```
+0 4 2 */2 * bash /home/ran/acme.sh --issue -d example.noip.me --keylength ec-384 --accountkeylength 4096 -w /home/ran/.acmeweb/ --force 1>/home/ran/acme_status.log 2>/home/ran/acme_error.log && sudo reboot
+```
+Do notice a system reboot is forced at the end, if you don't want this you can just restart the python server itself.
+Please use a different day and time! I'm sure Let's entcrypt can handle the load to their servers, but randomize it a bit.
+
+Every 2nd odd month:
+https://crontab.guru/#0_4_2_*/2_*
+
+Every 2nd even month:
+https://crontab.guru/#0_4_2_2-12/2_*
+
+
 ## License
 Licensed under the WTFPL license.
