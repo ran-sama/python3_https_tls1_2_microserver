@@ -31,6 +31,9 @@ class HSTSHandler(SimpleHTTPRequestHandler):
         self.send_header("Referrer-Policy", "no-referrer")
         SimpleHTTPRequestHandler.end_headers(self)
 
+HSTSHandler.extensions_map['.avif'] = 'image/avif'
+HSTSHandler.extensions_map['.webp'] = 'image/webp'
+
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     daemon_threads = True
 
